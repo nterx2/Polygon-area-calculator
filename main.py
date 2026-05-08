@@ -1,23 +1,35 @@
-import math
 class Rectangle:
     def __init__(self, width, height):
         self.width = width
         self.height = height
 
-    def set_width(self):
+    def set_width(self, width):
+        self.width = width
         return self.width
     
-    def set_height(self):
+    def set_height(self, height):
+        self.height = height
         return self.height
     
     def get_area(self):
         return self.width * self.height
     
+    def get_perimeter(self):
+        return 2 * (self.width * self.width)
+    
     def get_diagonal(self):
-        return math.sqrt(self.width ** 2 + self.height ** 2)
+        return (self.width ** 2 + self.height ** 2) ** 0.5
     
     def get_picture(self):
-        width_picture =  "*" * self.width + "\n"
-        for i in range(self.height):
-            print(width_picture)
+        width_picture =  ("*" * self.width + "\n") * self.height
+        return width_picture 
     
+    def __str__(self):
+        pass
+
+rect = Rectangle(10, 5)
+print(rect.get_area())
+rect.set_height(3)
+print(rect.get_perimeter())
+print(rect)
+print(rect.get_picture())    
