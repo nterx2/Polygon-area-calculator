@@ -16,3 +16,8 @@ class Rectangle:
     def get_diagonal(self):
         return math.sqrt(self.width ** 2 + self.height ** 2)
     
+    def get_picture(self):
+        width_picture =  "*" * self.width + "\n"
+        for i in range(self.height):
+            print(width_picture)
+    
