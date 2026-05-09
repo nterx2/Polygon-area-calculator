@@ -15,7 +15,7 @@ class Rectangle:
         return self.width * self.height
     
     def get_perimeter(self):
-        return 2 * (self.width * self.width)
+        return 2 * (self.width + self.width)
     
     def get_diagonal(self):
         return (self.width ** 2 + self.height ** 2) ** 0.5
@@ -25,7 +25,8 @@ class Rectangle:
         return width_picture 
     
     def __str__(self):
-        pass
+        result = f"{self.__class__.__name__}(width={self.width}, height={self.height})"
+        return result
 
 rect = Rectangle(10, 5)
 print(rect.get_area())
