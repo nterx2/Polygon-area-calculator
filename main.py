@@ -22,11 +22,19 @@ class Rectangle:
     
     def get_picture(self):
         width_picture =  ("*" * self.width + "\n") * self.height
-        return width_picture 
+        if self.width > 50 or self.height > 50:
+            return "Too big for picture."
+        else:
+            return width_picture 
     
     def __str__(self):
         result = f"{self.__class__.__name__}(width={self.width}, height={self.height})"
         return result
+
+class Square(Rectangle):
+    def __init__(self, width, height):
+        super().__init__(width, height)
+
 
 rect = Rectangle(10, 5)
 print(rect.get_area())
