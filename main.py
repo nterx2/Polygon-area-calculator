@@ -32,8 +32,14 @@ class Rectangle:
         return result
 
 class Square(Rectangle):
-    def __init__(self, width, height):
-        super().__init__(width, height)
+    def __init__(self, side):
+        super().__init__(side, side)
+    
+    def set_side(self, side):
+        self.width = side
+        self.height = side
+
+    
 
 
 rect = Rectangle(10, 5)
