@@ -39,8 +39,20 @@ class Square(Rectangle):
         self.width = side
         self.height = side
 
+    def get_area(self):
+        return super().get_area()
     
-
+    def get_perimeter(self):
+        return super().get_perimeter()
+    
+    def get_diagonal(self):
+        return super().get_diagonal()
+    
+    def get_picture(self):
+        return super().get_picture()
+    
+    def __str__(self):
+        return f"{self.__class__.__name__}(side={self.set_side()}"
 
 rect = Rectangle(10, 5)
 print(rect.get_area())
